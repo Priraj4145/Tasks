@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-selector Example</title>
+    <style>
+        button:hover {
+            background-color: lightblue;
+        }
+        .p1::before {
+            content: "* ";
+            color: blue;
+        }
+        .p2::after {
+            content: "=> ";
+            color: rgb(255, 123, 0);
+        }
+    </style>
+</head>
+<body>
+    <button>Hover over me!</button>
+    <p class="p1">This paragraph will have a star before it.</p>
+    <p class="p2">This paragraph will also have a star before it.</p>
+</body>
+</html>

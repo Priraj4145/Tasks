@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector Example</title>
+    <style>
+        [data-role] {
+            background-color: yellow;
+        }
+        [data-role="admin"] {
+            color: red;
+        }
+        [title*="hello"] {
+            font-weight: bold;
+        }
+        [class^="btn-"] {
+            padding: 10px;
+        }
+        [href$=".pdf"] {
+            text-decoration: underline;
+        }
+        [class~="active"] {
+            background-color: green;
+        }
+        [data-lang|="en"] {
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="admin">Admin Section</div>
+    <div data-role="user">User Section</div>
+    <a href="document.pdf" title="Download hello file">Download PDF</a>
+    <button class="btn-primary">Primary Button</button>
+    <button class="btn-secondary active">Secondary Button</button>
+    <p data-lang="en-us">English Content</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector Example</title>
+    <style>
+        /* CSS attribute selector */
+        [data-highlight] {
+            background-color: yellow;
+        }
+        [data-role|="user"]{
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <p data-highlight>This paragraph is highlighted because it has the 'data-highlight' attribute.</p>
+    <p>This paragraph is not highlighted because it does not have the 'data-highlight' attribute.</p>
+    <div data-highlight>This div is also highlighted because it has the 'data-highlight' attribute.</div><br/>
+
+    <div data-role ="user">User Section</Select></div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <style>
+        /* General styling for demonstration */
+        .container {
+            height: 1200px; /* To demonstrate scrolling with sticky */
+            border: 2px solid black;
+            position: relative;
+            margin: 10px;
+            padding: 10px;
+            background-color: bisque;
+        }
+
+        /* Static positioning (default) */
+        .static {
+            background-color: lightblue;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Relative positioning */
+        .relative {
+            background-color: lightgreen;
+            padding: 20px;
+            margin-bottom: 10px;
+            position: relative;
+            top: 20px; /* Moves the element 20px down from its original position */
+            left: 10px; /* Moves the element 20px to the right from its original position */
+        }
+
+        /* Absolute positioning */
+        .absolute {
+            background-color: lightcoral;
+            padding: 20px;
+            position: absolute;
+            top: 1000px; /* Moves the element 50px down from the top of its positioned ancestor */
+            right: 900px; /* Moves the element 20px from the right of its positioned ancestor */
+        }
+
+        /* Fixed positioning */
+        .fixed {
+            background-color: rgb(247, 247, 141);
+            padding: 20px;
+            position: fixed;
+            bottom: 80px; /* Moves the element 20px up from the bottom of the viewport */
+            left: 20px; /* Moves the element 20px from the left edge of the viewport */
+        }
+
+        /* Sticky positioning */
+        .sticky {
+            background-color: lightpink;
+            padding: 20px;
+            position: sticky;
+            top: 0; /* Sticks to the top of the container when scrolling */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="static">Static Position
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore tempora odit, excepturi voluptatum, mollitia, quam laboriosam esse possimus quod illum laborum iure quos aut officia porro consectetur nulla debitis minima.</p>
+        </div><br/><br/>
+        <div class="relative">Relative Position
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odio itaque nam exercitationem? Quisquam labore officiis similique numquam, amet fugit esse dolores cum, optio voluptas fuga corporis sequi ut dicta.</p>
+        </div><br/><br/>
+        <div class="absolute">Absolute Position 
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit accusantium corporis necessitatibus ullam repellendus maiores suscipit cum sed aperiam dolores in doloribus totam, eius iure molestias non quam illum debitis?</p>
+        </div><br/><br/>
+        <div class="sticky">Sticky Position
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam unde sint temporibus aliquid quasi iure sed est incidunt asperiores ducimus delectus sequi iusto sit provident, architecto, minima nam esse?</p>
+        </div>
+    </div>
+    <div class="fixed">Fixed Position
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quas impedit culpa natus, eos aliquid quasi perspiciatis! Accusamus reiciendis atque consequuntur rerum, pariatur vitae? Esse autem est magni illum ex!</p>
+    </div>
+</body>
+</html>
