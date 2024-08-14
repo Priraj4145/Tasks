@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Media Query Transform Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #61dafb;
+            border-radius: 50%;
+            animation: growShrink 3s infinite alternate;
+        }
+
+        @keyframes growShrink {
+            0% {
+                transform: scale(1);
+                background-color: #61dafb;
+            }
+            50% {
+                transform: scale(1.5);
+                background-color: #21a1f1;
+            }
+            100% {
+                transform: scale(1);
+                background-color: #61dafb;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+            }
+
+            .circle {
+                width: 50px;
+                height: 50px;
+                animation: growShrinkSmall 3s infinite alternate;
+            }
+
+            @keyframes growShrinkSmall {
+                0% {
+                    transform: scale(1);
+                    background-color: #61dafb;
+                }
+                50% {
+                    transform: scale(1.5);
+                    background-color: #21a1f1;
+                }
+                100% {
+                    transform: scale(1);
+                    background-color: #61dafb;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>
